@@ -1,29 +1,38 @@
 {
   "name": "ebrowser-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "author": "<vurses@qq.com>",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "start": "tsx index.ts",
-    "build": "npx tsc && pkg dist/index.js --targets node18-win-x64 --output ./build/easyBrApi.exe"
+    "build": "rollup --config && pkg ./dist/index.js --targets node18-win-x64 --output ./build/easyBrApi.exe"
   },
-  "bin": "dist/index.js",
+  "bin": "./dist/index.js",
   "pkg": {
     "scripts": "dist/**/*.js",
     "assets": "views/**/*",
-    "outputPath": "build",
+    "outputPath": "./build/easyBrApi.exe",
     "targets": [
       "node18-win-x64"
     ]
   },
   "dependencies": {
-    "typescript": "^5.8.3"
+    "axios": "^1.9.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/axios": "^0.14.4",
     "@types/node": "^24.0.1",
     "pkg": "^5.8.1",
+    "rollup": "^4.43.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
     "tsx": "^4.20.1"
   }
 }
