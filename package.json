@@ -1,0 +1,29 @@
+{
+  "name": "ebrowser-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<vurses@qq.com>",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsx index.ts",
+    "build": "npx tsc && pkg dist/index.js --targets node18-win-x64 --output ./build/easyBrApi.exe"
+  },
+  "bin": "dist/index.js",
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "assets": "views/**/*",
+    "outputPath": "build",
+    "targets": [
+      "node18-win-x64"
+    ]
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "pkg": "^5.8.1",
+    "tsx": "^4.20.1"
+  }
+}
