@@ -19,7 +19,8 @@
     ]
   },
   "dependencies": {
-    "axios": "^1.9.0"
+    "axios": "^1.9.0",
+    "axios-retry": "^4.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
@@ -32,7 +33,7 @@
     "pkg": "^5.8.1",
     "rollup": "^4.43.0",
     "tslib": "^2.8.1",
-    "typescript": "^5.8.3",
-    "tsx": "^4.20.1"
+    "tsx": "^4.20.1",
+    "typescript": "^5.8.3"
   }
 }
