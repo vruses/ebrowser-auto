@@ -54,5 +54,13 @@ interface Protocols {
   driverPath: string;
   browerid: string;
 }
+interface PageParams {
+  page: number;
+  limit: number;
+  browername: string;
+}
+type BrowserInfoWithRequiredId = {
+  browerid: string;
+} & Partial<Omit<BrowserInfo, "browerid">>;
 
-export { BrowserInfo, Protocols };
+export { BrowserInfo, Protocols, PageParams, BrowserInfoWithRequiredId };
