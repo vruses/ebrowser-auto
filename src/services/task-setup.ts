@@ -12,12 +12,8 @@ async function taskSetup(): Promise<BrowserInfoWithRequiredId[]> {
       limit: 30,
       browername: "",
     });
-    // 取出每个对象id
-    return browserList.map((value, index) => {
-      return {
-        browerid: value.browerid,
-      };
-    });
+    // 返回完整的配置对象
+    return browserList;
   } else {
     return [];
   }
