@@ -19,8 +19,8 @@ class HttpClient {
   constructor(config: DeepPartial<InternalAxiosRequestConfig> = {}) {
     this.axiosInstance = axios.create({
       ...config,
-      // 设置五秒超时，超时次数交给axiosRetry控制
-      timeout: 5 * 1000,
+      // 设置10秒超时，超时次数交给axiosRetry控制
+      timeout: 10 * 1000,
       maxBodyLength: 5 * 1024 * 1024,
       withCredentials: true,
     });
